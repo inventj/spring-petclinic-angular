@@ -8,4 +8,4 @@ RUN npm install -g @angular/cli@latest
 COPY . .
 
 EXPOSE 4200
-CMD [ "ng", "serve" ]
+ENTRYPOINT  [ "ng", "serve" ]
