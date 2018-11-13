@@ -9,4 +9,3 @@ COPY . .
 
 EXPOSE 4200
 CMD [ "ng", "serve" ]
-FROM node:8
