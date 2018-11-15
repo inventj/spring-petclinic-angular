@@ -9,10 +9,6 @@ RUN apt-get dist-upgrade -y
 # Install Node.js
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
 RUN apt-get install --yes nodejs
-RUN node -v
-RUN npm -v
-RUN npm i -g nodemon
-RUN nodemon -v
 
 # Cleanup
 RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y
