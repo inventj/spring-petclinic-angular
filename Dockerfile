@@ -6,6 +6,9 @@ RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get dist-upgrade -y
 
+RUN apt-get install curl git zip nano -y
+
+
 # Install Node.js
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
 RUN apt-get install --yes nodejs
