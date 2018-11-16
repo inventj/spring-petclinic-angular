@@ -11,7 +11,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
 RUN apt-get install --yes nodejs
 
 # Cleanup
-RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y
+RUN apt-get update -y && apt-get autoremove -y
 
 COPY package*.json ./
 
