@@ -3,15 +3,16 @@ FROM ubuntu:16.04
 WORKDIR /app
 
 RUN apt-get update
+RUN rm /var/lib/apt/lists/*
+RUN apt-get update
 RUN apt-get install curl -y
-
 
 # Install Node.js
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
 RUN apt-get install --yes nodejs
 
 # Cleanup
-RUN apt-get update -y && apt-get autoremove -y
+#RUN apt-get update -y && apt-get autoremove -y
 
 COPY package*.json ./
 
